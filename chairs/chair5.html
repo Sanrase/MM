@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Подробная информация о товаре</title>
+	<link rel="stylesheet" href=".\styles\styleItems.css">
+</head>
+<body>
+	<header style="display: flex; align-items: center; justify-content: space-between;">
+		<a href="index.html">На главную</a>
+	</header>
+	<header> 
+		<p align="center" style="font-size: 50px; font-weight: bold;">Furniture Haven
+		</p>
+	</header> 
+	<body>
+	<h1>Стул Мата</h1>
+	<img src="..\images\stul4.jpg" alt="Стул Мата" style="width: 20%;">
+	<p>Стул Мата - это элегантный и современный черный железный стул, который подходит для использования в различных интерьерах. Его универсальный дизайн позволяет легко интегрировать его в современные или классические пространства.
+
+        Стул Мата имеет прочную конструкцию из железа, что обеспечивает надежность и долговечность. Черный цвет стула придает ему стильный и минималистичный вид, который подчеркивает его привлекательность.
+        
+        Сиденье и спинка стула Мата имеют обтекаемую форму, что обеспечивает удобство и комфорт при длительном использовании. Этот стул также легко чистится и устойчив к пятнам и повреждениям.
+        
+        Стул Мата - это идеальный выбор для тех, кто ищет элегантный и практичный стул для использования в кухне, на веранде, в офисе или любом другом месте, где требуется удобство и стиль.</p>
+	<p>Цена: 1000 руб.</p>
+    <!-- Блок комментариев -->
+	<div class="comments">
+		<h3>Отзывы</h3>
+
+		<!-- Форма добавления комментария -->
+		<form onsubmit="addComment(event)">
+			<label for="name">Имя:⠀⠀⠀⠀⠀⠀</label>
+			<input type="text" id="name" required><br>
+			<label for="comment">Комментарий:</label>
+			<textarea id="comment" required></textarea><br>
+			<button type="submit">Добавить комментарий</button>
+		</form>
+
+		<!-- Список комментариев -->
+		<ul id="comment-list"></ul>
+		<script>
+		function addComment(event) {
+			event.preventDefault();
+
+			// Получить данные из формы
+			let name = document.getElementById('name').value;
+			let comment = document.getElementById('comment').value;
+
+			// Добавить комментарий в список
+			let commentList = document.getElementById('comment-list');
+			let newComment = document.createElement('li');
+			newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
+			commentList.appendChild(newComment);
+
+			// Очистить поля формы
+			document.getElementById('name').value = '';
+			document.getElementById('comment').value = '';
+		}
+	</script>
+	</div>
+	
+	<footer style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+        <p>© 2023 Furniture Haven</p> 
+        <p>Адрес: ул. Пушкина, 10, г. Владивосток</p> 
+        <p>Телефон: +7 (495) 123-45-67</p>
+        <p>© 2023-2023 «Furniture Haven» — не федеральная мебельная сеть. Все права не защищены.</p>
+        </footer> 
+</body>
+</html>

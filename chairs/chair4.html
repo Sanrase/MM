@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Подробная информация о товаре</title>
+	<link rel="stylesheet" href=".\styles\styleItems.css">
+</head>
+<body>
+	<header style="display: flex; align-items: center; justify-content: space-between;">
+		<a href="index.html">На главную</a>
+	</header>
+	<header> 
+		<p align="center" style="font-size: 50px; font-weight: bold;">Furniture Haven
+		</p>
+	</header> 
+	<body>
+	<h1>Стул лайт</h1>
+	<img src="..\images\stul3.jpg" alt="Стул лайт" style="width: 20%;">
+	<p>Стул лайт с салатовым цветом и деревянными ножками - это яркий и стильный стул, который добавит свежести и изысканности в любой интерьер. Салатовый цвет обивки стула создает ощущение легкости и света, а деревянные ножки придают ему естественности и тепла. Стул лайт изготовлен из качественных материалов, которые обеспечивают долговечность и надежность. Мягкое сиденье и спинка обтянуты прочной тканью, которая приятна на ощупь и обеспечивает комфорт. Деревянные ножки стула имеют прочную конструкцию и добавляют ему элегантности и стиля. Стул лайт с салатовым цветом и деревянными ножками идеально подходит для использования в гостиной, столовой или кабинете и легко сочетается с различными стилями интерьера. Этот стул станет отличным выбором для тех, кто хочет создать яркий и запоминающийся дизайн своего дома или офиса.</p>
+	<p>Цена: <s>3200</s>⠀2500 руб.</p>
+	<!-- Блок комментариев -->
+	<div class="comments">
+		<h3>Отзывы</h3>
+
+		<!-- Форма добавления комментария -->
+		<form onsubmit="addComment(event)">
+			<label for="name">Имя:⠀⠀⠀⠀⠀⠀</label>
+			<input type="text" id="name" required><br>
+			<label for="comment">Комментарий:</label>
+			<textarea id="comment" required></textarea><br>
+			<button type="submit">Добавить комментарий</button>
+		</form>
+
+		<!-- Список комментариев -->
+		<ul id="comment-list"></ul>
+		<script>
+		function addComment(event) {
+			event.preventDefault();
+
+			// Получить данные из формы
+			let name = document.getElementById('name').value;
+			let comment = document.getElementById('comment').value;
+
+			// Добавить комментарий в список
+			let commentList = document.getElementById('comment-list');
+			let newComment = document.createElement('li');
+			newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
+			commentList.appendChild(newComment);
+
+			// Очистить поля формы
+			document.getElementById('name').value = '';
+			document.getElementById('comment').value = '';
+		}
+	</script>
+	</div>
+	
+	<footer style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+        <p>© 2023 Furniture Haven</p> 
+        <p>Адрес: ул. Пушкина, 10, г. Владивосток</p> 
+        <p>Телефон: +7 (495) 123-45-67</p>
+        <p>© 2023-2023 «Furniture Haven» — не федеральная мебельная сеть. Все права не защищены.</p>
+        </footer> 
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Подробная информация о товаре</title>
+	<link rel="stylesheet" href=".\styles\styleItems.css">
+</head>
+<body>
+	<header style="display: flex; align-items: center; justify-content: space-between;">
+		<a href="index.html">На главную</a>
+	</header>
+	<header> 
+		<p align="center" style="font-size: 50px; font-weight: bold;">Furniture Haven
+		</p>
+	</header> 
+	<body>
+	<h1>Компьютерный стол</h1>
+	<img src="..\images\stol1.jpg" alt="Стол Бабочка" style="width: 20%;">
+	<p>Компьютерный стол - это специально разработанный стол, предназначенный для использования с компьютером или ноутбуком. Он обеспечивает удобство и комфорт для работы или игр на компьютере.
+
+        Компьютерные столы могут иметь различные конструкции и размеры, начиная от компактных моделей, которые подходят для небольших помещений, и заканчивая более крупными столами, предназначенными для использования в больших офисах.
+        
+        Основные особенности компьютерного стола включают наличие эргономичного стула, удобного для сидения в течение длительного времени, наличие полок для компьютерных аксессуаров, таких как клавиатура и мышь, и полок для хранения документов и других материалов.
+        
+        Компьютерные столы также могут иметь дополнительные функции, такие как встроенные зарядные устройства для мобильных устройств, встроенные динамики для прослушивания музыки, и подсветку для работы в темное время суток.
+        
+        Компьютерный стол - это необходимый элемент для тех, кто работает или проводит много времени за компьютером. Он обеспечивает удобство, комфорт и эффективность работы, а также может улучшить общий дизайн и функциональность рабочего пространства.</p>
+	<p>Цена: 2500 руб.</p>
+    <!-- Блок комментариев -->
+	<div class="comments">
+		<h3>Отзывы</h3>
+
+		<!-- Форма добавления комментария -->
+		<form onsubmit="addComment(event)">
+			<label for="name">Имя:⠀⠀⠀⠀⠀⠀</label>
+			<input type="text" id="name" required><br>
+			<label for="comment">Комментарий:</label>
+			<textarea id="comment" required></textarea><br>
+			<button type="submit">Добавить комментарий</button>
+		</form>
+
+		<!-- Список комментариев -->
+		<ul id="comment-list"></ul>
+		<script>
+		function addComment(event) {
+			event.preventDefault();
+
+			// Получить данные из формы
+			let name = document.getElementById('name').value;
+			let comment = document.getElementById('comment').value;
+
+			// Добавить комментарий в список
+			let commentList = document.getElementById('comment-list');
+			let newComment = document.createElement('li');
+			newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
+			commentList.appendChild(newComment);
+
+			// Очистить поля формы
+			document.getElementById('name').value = '';
+			document.getElementById('comment').value = '';
+		}
+	</script>
+	</div>
+	
+	<footer style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+        <p>© 2023 Furniture Haven</p> 
+        <p>Адрес: ул. Пушкина, 10, г. Владивосток</p> 
+        <p>Телефон: +7 (495) 123-45-67</p>
+        <p>© 2023-2023 «Furniture Haven» — не федеральная мебельная сеть. Все права не защищены.</p>
+        </footer> 
+</body>
+</html>

@@ -1,0 +1,28 @@
+header {
+    background: #333;
+    color: #fff;
+    padding: 2px;
+}
+
+button, a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #FFF;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover, a:hover {
+    background-color: #3e8e41;
+}
+
+footer {
+    flex-shrink: 0;
+    background-color: #333;			
+    padding: 20px;
+    margin-top: auto;
+}

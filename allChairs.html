@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Магазин мебели</title>
+	<link rel="stylesheet" href=".\styles\styleAll.css">
+</head>
+<body>
+	<!-- Шапка сайта -->
+	<header>
+		<div style="float: right;">
+			<a href="cart.html" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: #FFF; background-color: #4CAF50; border: none; border-radius: 5px; text-decoration: none; cursor: pointer;">
+				Корзина: <span id="cart-count"></span>
+			</a>
+		</div>
+		<p align="center" style="font-size: 50px; font-weight: bold;">Furniture Haven</p>
+	</header>
+	<table>
+		<thead>
+		
+		</thead>
+		<tbody>
+			<th colspan="5" style="text-align: center; padding: 10px; font-size: 24px;">Стулья</th>
+			<tr>
+				<th></th>
+				<th>Наименование</th>
+				<th>Цена</th>
+				<th></th>
+				<th></th>
+			  </tr>
+			<tr>
+				<td><img src=".\images\stul.jpg" alt="Стул Скай" style="width: 100px;"></td>
+				<td>Стул Скай</td>
+				<td>2000 руб.</td>
+				<td><button onclick="addToCart('Стул Скай', 2000)">Купить</button></td>
+                <td><a href=".\chairs\chair1.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\stul1.jpg" alt="Стул офисный" style="width: 100px;"></td>
+				<td>Стул офисный</td>
+				<td>500 руб.</td>
+				<td><button onclick="addToCart('Стул офисный', 500)">Купить</button></td>
+                <td><a href=".\chairs\chair2.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\stul2.jpg" alt="Стул Бархатный" style="width: 100px;"></td>
+				<td>Стул Бархатный</td>
+				<td>5000 руб.</td>
+				<td><button onclick="addToCart('Стул Бархатный', 5000)">Купить</button></td>
+                <td><a href=".\chairs\chair3.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\stul3.jpg" alt="Стул Бархатный" style="width: 100px;"></td>
+				<td>Стул лайт</td>
+				<td>2500 руб.</td>
+				<td><button onclick="addToCart('Стул Бархатный', 2500)">Купить</button></td>
+                <td><a href=".\chairs\chair4.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\stul4.jpg" alt="Стул Mata" style="width: 100px;"></td>
+				<td>Стул Mata</td>
+				<td>1000 руб.</td>
+				<td><button onclick="addToCart('Стул Mata', 1000)">Купить</button></td>
+                <td><a href=".\chairs\chair5.html">Подробнее</a></td>
+			</tr>
+		</tbody>
+	</table>
+
+
+		<!-- Список комментариев -->
+		<ul id="comment-list"></ul>
+	</div>
+
+	<!-- JavaScript-код для добавления комментариев и покупки товаров -->
+	<script src=".\scripts\scriptyAddCart.js"></script>
+	
+	<footer  class="footer" style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+		<p>© 2023 Furniture Haven</p> 
+		<p>Адрес: ул. Пушкина, 10, г. Владивосток</p> 
+		<p>Телефон: +7 (495) 123-45-67</p>
+		<p>© 2023-2023 «Furniture Haven» — не федеральная мебельная сеть. Все права не защищены.</p>
+	</footer>
+</body>
+</html>

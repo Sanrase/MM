@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Магазин мебели</title>
+	<link rel="stylesheet" href=".\styles\styleAll.css">
+</head>
+<body>
+	<!-- Шапка сайта -->
+	<header>
+		<div style="float: right;">
+			<a href="cart.html" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: #FFF; background-color: #4CAF50; border: none; border-radius: 5px; text-decoration: none; cursor: pointer;">
+				Корзина: <span id="cart-count"></span>
+			</a>
+		</div>
+		<p align="center" style="font-size: 50px; font-weight: bold;">Furniture Haven</p>
+	</header>
+
+	<!-- Таблица товаров в магазине -->
+	<table>
+		<thead>
+		
+		</thead>
+		<tbody>
+			<th colspan="5" style="text-align: center; padding: 10px; font-size: 24px;">Зеркала</th>
+			<tr>
+				<th></th>
+				<th>Наименование</th>
+				<th>Цена</th>
+				<th></th>
+				<th></th>
+			  </tr>
+			<tr>
+			<tr>
+				<td><img src=".\images\Zer.jpg" alt="Зеркало навесное Лючия светлая" style="width: 100px;"></td>
+				<td>Зеркало навесное Лючия светлая</td>
+				<td>24500 руб.</td>
+				<td><button onclick="addToCart('Зеркало навесное Лючия светлая', 24500)">Купить</button></td>
+                <td><a href=".\mirrors\Zer.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\Zer1.jpg" alt="Зеркало навесное Альберо" style="width: 100px;"></td>
+				<td>Зеркало-панель</td>
+				<td>7800 руб.</td>
+				<td><button onclick="addToCart('Зеркало навесное Альберо', 7800)">Купить</button></td>
+                <td><a href=".\mirrors\Zer1.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\Zer2.jpg" alt="Зеркало навесное Альберо" style="width: 100px;"></td>
+				<td>Зеркало навесное Альберо</td>
+				<td>4500 руб.</td>
+				<td><button onclick="addToCart('Зеркало навесное Альберо', 4500)">Купить</button></td>
+                <td><a href=".\mirrors\Zer2.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\Zer3.jpg" alt="Зеркало навесное Грация" style="width: 100px;"></td>
+				<td>Зеркало навесное Грация </td>
+				<td>3600 руб.</td>
+				<td><button onclick="addToCart('Зеркало навесное Грация', 3600)">Купить</button></td>
+                <td><a href=".\mirrors\Zer3.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\Zer4.jpg" alt="Зеркало навесное Opera" style="width: 100px;"></td>
+				<td>Зеркало навесное Opera</td>
+				<td>15700 руб.</td>
+				<td><button onclick="addToCart('Зеркало навесное Opera', 15700)">Купить</button></td>
+                <td><a href=".\mirrors\Zer4.html">Подробнее</a></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script src=".\scripts\scriptyAddCart.js"></script>
+<footer class="footer" style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+	 <p>© 2023 Furniture Haven</p> 
+	 <p>Адрес: ул. Пушкина, 10, г. Владивосток</p> 
+	 <p>Телефон: +7 (495) 123-45-67</p>
+	 <p>© 2023-2023 «Furniture Haven» — не федеральная мебельная сеть. Все права не защищены.</p>
+	 </footer>
+</body>
+</html>

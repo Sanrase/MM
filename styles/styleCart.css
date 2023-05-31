@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+header { 
+    text-align: center; 
+    padding: 10px; 
+    background-color: #f2f2f2; 
+    position: relative; 
+} 
+nav { 
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+} 
+/* Стили для таблицы корзины */ 
+table { 
+    margin: 0 auto; 
+    border-collapse: collapse; 
+    width: 80%; 
+} 
+th, td { 
+    padding: 10px; 
+    text-align: left; 
+    border: 1px solid #ddd; 
+} 
+th { 
+    background-color: #f2f2f2; 
+    text-align: center; 
+} 
+
+.footer {
+    flex-shrink: 0;
+    background-color: #333;			
+    padding: 20px;
+    margin-top: auto;
+}
+.clear-btn{
+    float: left;
+    width: 150px;
+    margin: 10px;
+    margin-left: 250px;
+    padding: 10px; 
+    background-color: #f44336; 
+    color: white; 
+    border: none; 
+    cursor: pointer;
+}
+
+.checkout-btn {
+    float: right; 
+    margin: 10px;
+    margin-right: 250px; 
+    padding: 10px; 
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    cursor: pointer; 
+}
+
+#clear-cart-btn:hover { 
+    background-color: #d32f2f; 
+} 
+
+#checkout-btn:hover { 
+    background-color: #3e8e41; 
+} 

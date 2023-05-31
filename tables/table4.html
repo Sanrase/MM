@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Подробная информация о товаре</title>
+	<link rel="stylesheet" href=".\styles\styleItems.css">
+</head>
+<body>
+	<header style="display: flex; align-items: center; justify-content: space-between;">
+		<a href="index.html">На главную</a>
+	</header>
+	<header> 
+		<p align="center" style="font-size: 50px; font-weight: bold;">Furniture Haven
+		</p>
+	</header> 
+	<body>
+	<h1>Стол Кухонный</h1>
+	<img src="..\images\stol3.jpg" alt="Стол Кухонный" style="width: 20%;">
+	<p>Стол кухонный - это важный элемент мебели для любой кухни. Он предназначен для различных задач, таких как приготовление пищи, употребление еды или проведение времени в кругу семьи и друзей.
+
+        Стол кухонный может быть выполнен из различных материалов, таких как дерево, металл, стекло или пластик. Материал выбирается в зависимости от стиля кухни, функциональности и бюджета.
+        
+        Одна из особенностей стола кухонного - это его размер. Он должен быть достаточно большим для удобного размещения посуды, продуктов и других материалов, но при этом не слишком громоздким, чтобы не занимать слишком много места в кухне.
+        
+        Стол кухонный может иметь дополнительные функции, такие как выдвижные ящики для хранения посуды или полки для книг и других материалов.
+        
+        Стол кухонный также может иметь различные стили и дизайны, от классических до современных. Это позволяет выбрать наиболее подходящий вариант для вашего интерьера.
+        
+        Стол кухонный - это необходимый элемент для любой кухни. Он обеспечивает удобство, комфорт и функциональность, а также может стать центральным элементом в дизайне вашей кухни.</p>
+	<p>Цена: 5800 руб.</p>
+    <!-- Блок комментариев -->
+	<div class="comments">
+		<h3>Отзывы</h3>
+
+		<!-- Форма добавления комментария -->
+		<form onsubmit="addComment(event)">
+			<label for="name">Имя:⠀⠀⠀⠀⠀⠀</label>
+			<input type="text" id="name" required><br>
+			<label for="comment">Комментарий:</label>
+			<textarea id="comment" required></textarea><br>
+			<button type="submit">Добавить комментарий</button>
+		</form>
+
+		<!-- Список комментариев -->
+		<ul id="comment-list"></ul>
+		<script>
+		function addComment(event) {
+			event.preventDefault();
+
+			// Получить данные из формы
+			let name = document.getElementById('name').value;
+			let comment = document.getElementById('comment').value;
+
+			// Добавить комментарий в список
+			let commentList = document.getElementById('comment-list');
+			let newComment = document.createElement('li');
+			newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
+			commentList.appendChild(newComment);
+
+			// Очистить поля формы
+			document.getElementById('name').value = '';
+			document.getElementById('comment').value = '';
+		}
+	</script>
+	</div>
+	
+	<footer style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+        <p>© 2023 Furniture Haven</p> 
+        <p>Адрес: ул. Пушкина, 10, г. Владивосток</p> 
+        <p>Телефон: +7 (495) 123-45-67</p>
+        <p>© 2023-2023 «Furniture Haven» — не федеральная мебельная сеть. Все права не защищены.</p>
+        </footer> 
+</body>
+</html>

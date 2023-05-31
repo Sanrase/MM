@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Магазин мебели</title>
+	<link rel="stylesheet" href=".\styles\styleAll.css">
+</head>
+<body>
+	<header>
+		<div style="float: right;">
+			<a href="cart.html" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: #FFF; background-color: #4CAF50; border: none; border-radius: 5px; text-decoration: none; cursor: pointer;">
+				Корзина: <span id="cart-count"></span>
+			</a>
+		</div>
+		<p align="center" style="font-size: 50px; font-weight: bold;">Furniture Haven</p>
+	</header>
+	<table>
+		<thead>
+		
+		</thead>
+		<tbody>
+			<th colspan="5" style="text-align: center; padding: 10px; font-size: 24px;">Столы</th>
+			<tr>
+				<th></th>
+				<th>Наименование</th>
+				<th>Цена</th>
+				<th></th>
+				<th></th>
+			  </tr>
+			<tr>
+				<td><img src=".\images\stol.jpg" alt="Стол Бабочка" style="width: 100px;"></td>
+				<td>Стол Бабочка</td>
+				<td>7800 руб.</td>
+				<td><button onclick="addToCart('Стол Бабочка', 7800)">Купить</button></td>
+                <td><a href=".\tables\table1.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\stol1.jpg" alt="Компьютерный стол" style="width: 100px;"></td>
+				<td>Компьютерный стол</td>
+				<td>2500 руб.</td>
+				<td><button onclick="addToCart('Компьютерный стол', 2500)">Купить</button></td>
+                <td><a href=".\tables\table2.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\stol2.jpg" alt="Стол паук" style="width: 100px;"></td>
+				<td>Стол паук</td>
+				<td>1700 руб.</td>
+				<td><button onclick="addToCart('Стол паук', 1700)">Купить</button></td>
+                <td><a href=".\tables\table3.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\stol3.jpg" alt="Стол кухонный" style="width: 100px;"></td>
+				<td>Стол кухонный</td>
+				<td>5800 руб.</td>
+				<td><button onclick="addToCart('Стол паук', 5800)">Купить</button></td>
+                <td><a href=".\tables\table4.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\stol4.jpg" alt="Стол трапеция" style="width: 100px;"></td>
+				<td>Стол трапеция</td>
+				<td>7499 руб.</td>
+				<td><button onclick="addToCart('Стол трапеция', 5800)">Купить</button></td>
+                <td><a href=".\tables\table5.html">Подробнее</a></td>
+			</tr>
+	
+		</tbody>
+	</table>
+
+	<script src=".\scripts\scriptyAddCart.js"></script>
+	<footer class="footer"style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+		<p>© 2023 Furniture Haven</p> 
+		<p>Адрес: ул. Пушкина, 10, г. Владивосток</p> 
+		<p>Телефон: +7 (495) 123-45-67</p>
+		<p>© 2023-2023 «Furniture Haven» — не федеральная мебельная сеть. Все права не защищены.</p>
+		</footer>
+
+</body>
+</html>

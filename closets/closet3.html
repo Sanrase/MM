@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Подробная информация о товаре</title>
+	<link rel="stylesheet" href=".\styles\styleItems.css">
+</head>
+<header style="display: flex; align-items: center; justify-content: space-between;">
+	<a href="index.html">На главную</a>
+</header>
+<header> 
+	<p align="center" style="font-size: 50px; font-weight: bold;">Furniture Haven
+	</p>
+</header> 
+<body>
+	<h1>Многофункциональный шкаф "Мастер" </h1>
+	<img src="..\images\shkaf2.jpg" alt="Многофункциональный шкаф Мастер"  style="width: 20%;">
+	<p>Многофункциональный шкаф "Мастер" - это прекрасное решение для хранения различных предметов и инструментов в вашем рабочем пространстве или гараже. Шкаф "Мастер" имеет множество полок и ящиков разной глубины и размера, что позволяет разместить в нем как мелкие, так и крупные предметы. Он выполнен из прочного и долговечного материала, который обеспечивает стойкость к механическим воздействиям и коррозии. Кроме того, шкаф "Мастер" обладает стильным дизайном и может быть легко вписан в любой интерьер рабочего пространства. Благодаря своей функциональности и надежности, шкаф "Мастер" поможет вам организовать ваше рабочее пространство и сохранить все необходимые инструменты и предметы в порядке.</p>
+	<p>Цена: 13000 руб.</p>
+    <!-- Блок комментариев -->
+	<div class="comments">
+		<h3>Отзывы</h3>
+
+		<!-- Форма добавления комментария -->
+		<form onsubmit="addComment(event)">
+			<label for="name">Имя:⠀⠀⠀⠀⠀⠀</label>
+			<input type="text" id="name" required><br>
+			<label for="comment">Комментарий:</label>
+			<textarea id="comment" required></textarea><br>
+			<button type="submit">Добавить комментарий</button>
+		</form>
+
+		<!-- Список комментариев -->
+		<ul id="comment-list"></ul>
+		<script>
+		function addComment(event) {
+			event.preventDefault();
+
+			// Получить данные из формы
+			let name = document.getElementById('name').value;
+			let comment = document.getElementById('comment').value;
+
+			// Добавить комментарий в список
+			let commentList = document.getElementById('comment-list');
+			let newComment = document.createElement('li');
+			newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
+			commentList.appendChild(newComment);
+
+			// Очистить поля формы
+			document.getElementById('name').value = '';
+			document.getElementById('comment').value = '';
+		}
+	</script>
+	</div>
+	
+	<footer style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+        <p>© 2023 Furniture Haven</p> 
+        <p>Адрес: ул. Пушкина, 10, г. Владивосток</p> 
+        <p>Телефон: +7 (495) 123-45-67</p>
+        <p>© 2023-2023 «Furniture Haven» — не федеральная мебельная сеть. Все права не защищены.</p>
+        </footer> 
+</body>
+</html>

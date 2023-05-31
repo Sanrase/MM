@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Подробная информация о товаре</title>
+	<link rel="stylesheet" href=".\styles\styleItems.css">
+</head>
+<body>
+	<header style="display: flex; align-items: center; justify-content: space-between;">
+		<a href="index.html">На главную</a>
+	</header>
+	<header> 
+		<p align="center" style="font-size: 50px; font-weight: bold;">Furniture Haven
+		</p>
+	</header> 
+	<body>
+	<h1>Стул Бархатный</h1>
+	<img src="..\images\stul2.jpg" alt="Стул Бархатный" style="width: 20%;">
+	<p>Стул Бархатный - это элегантный и стильный стул, который станет прекрасным дополнением к любому интерьеру. Стул выполнен в белом цвете из мягкого бархата, который создает ощущение роскоши и комфорта. Ножки стула изготовлены из качественного дерева и имеют прочную конструкцию, обеспечивающую долговечность и надежность. Белый бархатный стул с деревянными ножками не только выглядит эффектно, но и обладает удобством. Мягкое сиденье и спинка стула обеспечивают комфортное положение тела, а деревянные ножки добавляют изящества и элегантности. Этот стул идеально подходит для использования в гостиной, спальне или кабинете и легко сочетается с различными стилями интерьера. Бархатный стул с деревянными ножками - отличный выбор для тех, кто ценит красоту, комфорт и функциональность в одном предмете мебели.</p>
+	<p>Цена: 5000 руб.</p>
+	<!-- Блок комментариев -->
+	<div class="comments">
+		<h3>Отзывы</h3>
+
+		<!-- Форма добавления комментария -->
+		<form onsubmit="addComment(event)">
+			<label for="name">Имя:⠀⠀⠀⠀⠀⠀</label>
+			<input type="text" id="name" required><br>
+			<label for="comment">Комментарий:</label>
+			<textarea id="comment" required></textarea><br>
+			<button type="submit">Добавить комментарий</button>
+		</form>
+
+		<!-- Список комментариев -->
+		<ul id="comment-list"></ul>
+		<script>
+		function addComment(event) {
+			event.preventDefault();
+
+			// Получить данные из формы
+			let name = document.getElementById('name').value;
+			let comment = document.getElementById('comment').value;
+
+			// Добавить комментарий в список
+			let commentList = document.getElementById('comment-list');
+			let newComment = document.createElement('li');
+			newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
+			commentList.appendChild(newComment);
+
+			// Очистить поля формы
+			document.getElementById('name').value = '';
+			document.getElementById('comment').value = '';
+		}
+	</script>
+	</div>
+	
+	<footer style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+        <p>© 2023 Furniture Haven</p> 
+        <p>Адрес: ул. Пушкина, 10, г. Владивосток</p> 
+        <p>Телефон: +7 (495) 123-45-67</p>
+        <p>© 2023-2023 «Furniture Haven» — не федеральная мебельная сеть. Все права не защищены.</p>
+        </footer> 
+</body>
+</html>

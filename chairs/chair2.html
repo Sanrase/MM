@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Подробная информация о товаре</title>
+	<link rel="stylesheet" href=".\styles\styleItems.css">
+</head>
+<body>
+	<header style="display: flex; align-items: center; justify-content: space-between;">
+		<a href="index.html">На главную</a>
+	</header>
+	<header> 
+		<p align="center" style="font-size: 50px; font-weight: bold;">Furniture Haven
+		</p>
+	</header> 
+	<body>
+	<h1>Стул офисный</h1>
+	<img src="..\images\stul1.jpg" alt="Стул офисный" style="width: 20%;">
+	<p>Офисный стул - это удобный и практичный стул, который идеально подходит для работы в офисе или домашнем кабинете. Стул выполнен из прочных материалов, которые обеспечивают долговечность и надежность. Комфортное сиденье и спинка обтянуты мягкой тканью или кожей, которые приятны на ощупь и позволяют длительное время сидеть за столом без усталости. Столик и подлокотники выполнены из прочного пластика или металла, что обеспечивает надежную поддержку и устойчивость. Некоторые модели стульев оснащены встроенными механизмами регулировки высоты, наклона и подлокотников, которые позволяют настроить стул на индивидуальные потребности пользователя. Офисный стул имеет современный и стильный дизайн, который легко сочетается с различными стилями интерьера и добавляет в него изысканности и элегантности.</p>
+	<p>Цена: 500 руб.</p>
+	<!-- Список комментариев -->
+	<ul id="comment-list"></ul>
+	<script>
+	function addComment(event) {
+		event.preventDefault();
+
+		// Получить данные из формы
+		let name = document.getElementById('name').value;
+		let comment = document.getElementById('comment').value;
+
+		// Добавить комментарий в список
+		let commentList = document.getElementById('comment-list');
+		let newComment = document.createElement('li');
+		newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
+		commentList.appendChild(newComment);
+
+		// Очистить поля формы
+		document.getElementById('name').value = '';
+		document.getElementById('comment').value = '';
+	}
+</script>
+</div>
+
+<footer style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+	<p>© 2023 Furniture Haven</p> 
+	<p>Адрес: ул. Пушкина, 10, г. Владивосток</p> 
+	<p>Телефон: +7 (495) 123-45-67</p>
+	<p>© 2023-2023 «Furniture Haven» — не федеральная мебельная сеть. Все права не защищены.</p>
+	</footer> 
+</body>
+</html>

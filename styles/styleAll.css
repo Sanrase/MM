@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 2px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.comments {
+    margin: 20px 0;
+}
+
+.comments h3 {
+    margin-bottom: 10px;
+}
+
+.comments form {
+    margin-bottom: 20px;
+}
+
+button, a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #FFF;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover, a:hover {
+    background-color: #3e8e41;
+}
+
+.footer {
+    flex-shrink: 0;
+    background-color: #333;			
+    padding: 20px;
+    margin-top: auto;
+}

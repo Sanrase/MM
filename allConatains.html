@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Магазин мебели</title>
+	<link rel="stylesheet" href=".\styles\styleAll.css">
+</head>
+<body>
+	<!-- Шапка сайта -->
+	<header>
+		<div style="float: right;">
+			<a href="cart.html" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: #FFF; background-color: #4CAF50; border: none; border-radius: 5px; text-decoration: none; cursor: pointer;">
+				Корзина: <span id="cart-count"></span>
+			</a>
+		</div>
+		<p align="center" style="font-size: 50px; font-weight: bold;">Furniture Haven</p>
+	</header>
+	<table>
+		<thead>
+		
+		</thead>
+		<tbody>
+			<th colspan="5" style="text-align: center; padding: 10px; font-size: 24px;">Шкафы</th>
+			<tr>
+				<th></th>
+				<th>Наименование</th>
+				<th>Цена</th>
+				<th></th>
+				<th></th>
+			  </tr>
+			<tr>
+			<tr>
+				<td><img src=".\images\shkaf.jpg" alt="Шкаф-гардероб 'Армада'" style="width: 100px;"></td>
+				<td>Шкаф-гардероб "Армада"</td>
+				<td>4500 руб.</td>
+				<td><button onclick="addToCart('Шкаф-гардероб Армада', 4500)">Купить</button></td>
+                <td><a href=".\closets\closet1.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\shkaf1.jpg" alt="Шкаф-купе Элегант" style="width: 100px;"></td>
+				<td>Шкаф-купе "Элегант"</td>
+				<td>7800 руб.</td>
+				<td><button onclick="addToCart('Шкаф-купе Элегант', 7800)">Купить</button></td>
+                <td><a href=".\closets\closet2.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\shkaf2.jpg" alt="Многофункциональный шкаф Мастер" style="width: 100px;"></td>
+				<td>Многофункциональный шкаф "Мастер"</td>
+				<td>13000 руб.</td>
+				<td><button onclick="addToCart('Многофункциональный шкаф Мастер', 13000)">Купить</button></td>
+                <td><a href=".\closets\closet3.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\shkaf3.jpg" alt="Книжный шкаф Классик" style="width: 100px;"></td>
+				<td>Книжный шкаф "Классик" </td>
+				<td>5600 руб.</td>
+				<td><button onclick="addToCart('Книжный шкаф Классик', 5600)">Купить</button></td>
+                <td><a href=".\closets\closet4.html">Подробнее</a></td>
+			</tr>
+			<tr>
+				<td><img src=".\images\shkaf4.jpg" alt="Шкаф для документов Профессионал" style="width: 100px;"></td>
+				<td>Шкаф для документов "Профессионал"</td>
+				<td>12400 руб.</td>
+				<td><button onclick="addToCart('Шкаф для документов Профессионал', 12400)">Купить</button></td>
+                <td><a href=".\closets\closet5.html">Подробнее</a></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script src=".\scripts\scriptyAddCart.js"></script>
+	
+	<footer class="footer" style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+		<p>© 2023 Furniture Haven</p> 
+		<p>Адрес: ул. Пушкина, 10, г. Владивосток</p> 
+		<p>Телефон: +7 (495) 123-45-67</p>
+		<p>© 2023-2023 «Furniture Haven» — не федеральная мебельная сеть. Все права не защищены.</p>
+		</footer>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Подробная информация о товаре</title>
+	<link rel="stylesheet" href=".\styles\styleItems.css">
+</head>
+<body>
+	<header style="display: flex; align-items: center; justify-content: space-between;">
+		<a href="index.html">На главную</a>
+	</header>
+	<header> 
+		<p align="center" style="font-size: 50px; font-weight: bold;">Furniture Haven
+		</p>
+	</header> 
+	<body>
+	<h1>Стол Трапеция</h1>
+	<img src="..\images\stol4.jpg" alt="Стол Трапеция" style="width: 20%;">
+	<p>Стол трапеция - это стильный и элегантный стол, который получил свое название благодаря своей форме, напоминающей трапецию. Он может быть изготовлен из различных материалов, таких как дерево, металл или стекло, что позволяет выбрать наиболее подходящую опцию для вашего интерьера.
+
+        Стол трапеция имеет уникальную форму и дизайн, что делает его привлекательным элементом в любом помещении. Он может служить как обеденный стол, стол для работы или стол для игр.
+        
+        Одна из особенностей стола трапеция - это его функциональность и удобство. Благодаря своей форме, он обеспечивает достаточно места для комфортного размещения гостей или для работы за столом.
+        
+        Стол трапеция может иметь дополнительные функции, такие как выдвижные ящики для хранения посуды или других материалов, а также полки для книг и документов.
+        
+        Стол трапеция - это идеальный выбор для тех, кто ищет стильный и функциональный стол для использования в различных интерьерах. Он обеспечивает удобство, комфорт и элегантный дизайн, который может стать центральным элементом в вашей комнате.</p>
+	<p>Цена: 7499 руб.</p>
+    <!-- Блок комментариев -->
+	<div class="comments">
+		<h3>Отзывы</h3>
+
+		<!-- Форма добавления комментария -->
+		<form onsubmit="addComment(event)">
+			<label for="name">Имя:⠀⠀⠀⠀⠀⠀</label>
+			<input type="text" id="name" required><br>
+			<label for="comment">Комментарий:</label>
+			<textarea id="comment" required></textarea><br>
+			<button type="submit">Добавить комментарий</button>
+		</form>
+
+		<!-- Список комментариев -->
+		<ul id="comment-list"></ul>
+		<script>
+		function addComment(event) {
+			event.preventDefault();
+
+			// Получить данные из формы
+			let name = document.getElementById('name').value;
+			let comment = document.getElementById('comment').value;
+
+			// Добавить комментарий в список
+			let commentList = document.getElementById('comment-list');
+			let newComment = document.createElement('li');
+			newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
+			commentList.appendChild(newComment);
+
+			// Очистить поля формы
+			document.getElementById('name').value = '';
+			document.getElementById('comment').value = '';
+		}
+	</script>
+	</div>
+	
+	<footer style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+        <p>© 2023 Furniture Haven</p> 
+        <p>Адрес: ул. Пушкина, 10, г. Владивосток</p> 
+        <p>Телефон: +7 (495) 123-45-67</p>
+        <p>© 2023-2023 «Furniture Haven» — не федеральная мебельная сеть. Все права не защищены.</p>
+        </footer> 
+</body>
+</html>

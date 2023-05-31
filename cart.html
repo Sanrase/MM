@@ -1,0 +1,74 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>Корзина</title> 
+	<link rel="stylesheet" href=".	\styles\styleCart.css">
+</head> 
+<body> 
+	<!-- Шапка сайта --> 
+	<header> 
+		<h1>Корзина</h1> 
+	</header> 
+	<!-- Таблица корзины --> 
+	<table> 
+		<thead> 
+			<tr> 
+				<th>Наименование</th> 
+				<th>Цена</th> 
+				<th>Кол-во</th> 
+			</tr> 
+		</thead> 
+		<tbody id="cart-table-body"> 
+			<!-- Здесь будут добавляться товары из корзины --> 
+		</tbody> 
+	</table>
+	<div>
+		<button class="clear-btn" id="clear-cart-btn">Очистить корзину</button>
+		<a href="checkout.html"><button class="checkout-btn" id="checkout-btn">Оформить заказ</button></a>
+	</div>
+
+	<script>
+		// Функция отображения товаров в корзине
+		function showCart() {
+			// Получить текущую корзину из Local Storage
+			let cart = JSON.parse(localStorage.getItem('cart')) || [];
+			// Получить тело таблицы корзины
+			let cartTableBody = document.getElementById('cart-table-body');
+			// Очистить таблицу
+			cartTableBody.innerHTML = '';
+			// Добавить товары в таблицу
+			let allPrise=0;
+			for (let item of cart) {
+				let itemRow = cartTableBody.insertRow();
+				let nameCell = itemRow.insertCell();
+				let priceCell = itemRow.insertCell();
+				let quantityCell = itemRow.insertCell();
+				nameCell.textContent = item.name;
+				priceCell.textContent = item.price;
+				quantityCell.textContent = item.quantity;
+			}
+
+		}
+		// Функция очистки корзины
+		function clearCart() {
+			// Очистить корзину в Local Storage
+			localStorage.removeItem('cart');
+			// Обновить отображение товаров в корзине
+			showCart();
+		}
+		// Отобразить товары в корзине
+		showCart();
+		// Назначить обработчик клика на кнопку очистки корзины
+		let clearCartBtn = document.getElementById('clear-cart-btn');
+		clearCartBtn.addEventListener('click', clearCart);
+	</script>
+	    <div style="clear: both;"></div>
+
+	<footer class="footer" style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+        <p>© 2023 Furniture Haven</p> 
+        <p>Адрес: ул. Пушкина, 10, г. Владивосток</p> 
+        <p>Телефон: +7 (495) 123-45-67</p>
+        <p>© 2023-2023 «Furniture Haven» — не федеральная мебельная сеть. Все права не защищены.</p>
+        </footer> 
+</body> 
+</html>

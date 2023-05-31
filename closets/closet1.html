@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Подробная информация о товаре</title>
+	<link rel="stylesheet" href=".\styles\styleItems.css">
+</head>
+<header style="display: flex; align-items: center; justify-content: space-between;">
+	<a href="index.html">На главную</a>
+</header>
+<header> 
+	<p align="center" style="font-size: 50px; font-weight: bold;">Furniture Haven
+	</p>
+</header> 
+<body>
+	<h1>Шкаф-гардероб "Армада" </h1>
+	<img src="..\images\shkaf.jpg" alt="Шкаф-гардероб Армада"  style="width: 20%;">
+	<p>Шкаф-гардероб "Армада" - это элегантное и просторное решение для хранения одежды и аксессуаров. Он выполнен из высококачественных материалов, которые обеспечивают прочность и долговечность конструкции. Шкаф-гардероб "Армада" имеет множество полок, ящиков и вешалок, которые позволяют разместить все вещи в оптимальном порядке. Благодаря своей функциональности и стильному дизайну, шкаф-гардероб "Армада" идеально впишется в любой интерьер спальни или гардеробной комнаты, придавая ей уют и элегантность.</p>
+	<p>Цена: 4500 руб.</p>
+    <!-- Блок комментариев -->
+	<div class="comments">
+		<h3>Отзывы</h3>
+
+		<!-- Форма добавления комментария -->
+		<form onsubmit="addComment(event)">
+			<label for="name">Имя:⠀⠀⠀⠀⠀⠀</label>
+			<input type="text" id="name" required><br>
+			<label for="comment">Комментарий:</label>
+			<textarea id="comment" required></textarea><br>
+			<button type="submit">Добавить комментарий</button>
+		</form>
+
+		<!-- Список комментариев -->
+		<ul id="comment-list"></ul>
+		<script>
+		function addComment(event) {
+			event.preventDefault();
+
+			// Получить данные из формы
+			let name = document.getElementById('name').value;
+			let comment = document.getElementById('comment').value;
+
+			// Добавить комментарий в список
+			let commentList = document.getElementById('comment-list');
+			let newComment = document.createElement('li');
+			newComment.innerHTML = `<strong>${name}:</strong> ${comment}`;
+			commentList.appendChild(newComment);
+
+			// Очистить поля формы
+			document.getElementById('name').value = '';
+			document.getElementById('comment').value = '';
+		}
+	</script>
+	</div>
+	
+	<footer style="background-color: #333; color: #fff; padding: 20px; text-align: center;">
+        <p>© 2023 Furniture Haven</p> 
+        <p>Адрес: ул. Пушкина, 10, г. Владивосток</p> 
+        <p>Телефон: +7 (495) 123-45-67</p>
+        <p>© 2023-2023 «Furniture Haven» — не федеральная мебельная сеть. Все права не защищены.</p>
+        </footer> 
+</body>
+</html>
